@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Apna Sawaad - Authentic Bihari sweets and snacks from Patna. Buy Khajur, Gulgulla, Laddu, Thekua, Tilkut, Anarsa, Balushahi, Malpua, Kheer Kadam online.">
   <meta name="keywords" content="Apna Sawaad, Bihari sweets, Khajur, Gulgulla, Laddu, Thekua, Tilkut, Anarsa, Balushahi, Malpua, Kheer Kadam, Patna food, Indian snacks, Bihar culture">
-  <title>Apna Sawaad - Patna’s Pride in Every Bite</title>
+  <title>Apna Sawaad - delightfull Sweetness </title>
   <!-- React and ReactDOM -->
   <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
@@ -206,17 +206,21 @@
   <div id="root"></div>
   <script type="text/babel">
     // Product data
-    const products = [
-      { id: 1, name: "Khajur (Shakkar Para)", price: 150, image: "items/khajur.jpg", description: "Crispy, sweet shakkar para made with love in Patna.", flavor: "Sweet, crunchy, ghee-rich" },
-      { id: 2, name: "Gulgulla", price: 120, image: "items/gulgulla.jpg", description: "Soft, fluffy sweet dumplings, a Bihari classic.", flavor: "Jaggery-sweet, soft, warm" },
-      { id: 3, name: "Laddu", price: 180, image: "items/laddu.jpg", description: "Rich, melt-in-mouth laddus for every occasion.", flavor: "Nutty, sweet, buttery" },
-      { id: 4, name: "Thekua", price: 100, image: "items/thekua.jpg", description: "Crunchy, traditional Bihari sweet made with jaggery.", flavor: "Crisp, jaggery, cardamom" },
-      { id: 5, name: "Tilkut", price: 160, image: "items/tilkut.jpg", description: "Sesame and jaggery treat, a winter favorite.", flavor: "Nutty, sweet, sesame" },
-      { id: 6, name: "Anarsa", price: 140, image: "items/anarsa.jpg", description: "Rice flour and jaggery patties, coated with poppy seeds.", flavor: "Sweet, crispy, poppy" },
-      { id: 7, name: "Balushahi", price: 170, image: "items/balushahi.jpg", description: "Flaky, sugar-syrup coated sweet, a festive delight.", flavor: "Sweet, flaky, syrupy" },
-      { id: 8, name: "Malpua", price: 130, image: "items/malpua.jpg", description: "Pancake-like sweet soaked in sugar syrup.", flavor: "Sweet, soft, syrupy" },
-      { id: 9, name: "Kheer Kadam", price: 190, image: "items/kheer_kadam.jpg", description: "Layered sweet with khoya and rasgulla.", flavor: "Creamy, sweet, milky" }
-    ];
+const products = [
+  { id: 1, name: "Gulab Jamun", price: 150, image: "items/gulab_jamun.jpg", description: "Soft, spongy milk-solid balls soaked in sugar syrup.", flavor: "Sweet, syrupy, soft" },
+  { id: 2, name: "Rasgulla", price: 140, image: "items/rasgulla.jpg", description: "Spongy, juicy cottage cheese balls in light syrup.", flavor: "Sweet, juicy, spongy" },
+  { id: 3, name: "Jalebi", price: 120, image: "items/jalebi.jpg", description: "Crispy, spiral-shaped sweet soaked in sugar syrup.", flavor: "Crispy, syrupy, tangy-sweet" },
+  { id: 4, name: "Barfi", price: 160, image: "items/barfi.jpg", description: "Rich, fudgy milk-based sweet, perfect for celebrations.", flavor: "Milky, sweet, rich" },
+  { id: 5, name: "Kaju Katli", price: 200, image: "items/kaju_katli.jpg", description: "Diamond-shaped cashew sweet with silver leaf.", flavor: "Nutty, smooth, mildly sweet" },
+  { id: 6, name: "Peda", price: 130, image: "items/peda.jpg", description: "Traditional milk-based sweet flavored with cardamom.", flavor: "Milky, cardamom, soft" },
+  { id: 7, name: "Sandesh", price: 170, image: "items/sandesh.jpg", description: "Bengali delicacy made from fresh cottage cheese.", flavor: "Soft, light, sweet" },
+  { id: 8, name: "Soan Papdi", price: 110, image: "items/soan_papdi.jpg", description: "Flaky, melt-in-mouth sweet with nutty flavor.", flavor: "Flaky, nutty, sweet" },
+  { id: 9, name: "Rasmalai", price: 190, image: "items/rasmalai.jpg", description: "Soft rasgullas soaked in creamy saffron milk.", flavor: "Creamy, sweet, saffron-rich" },
+  { id: 10, name: "Rasmadhuri", price: 10, image: "items/rasmadhuri.jpg", description: "An indulgent twist on rasgulla, Rasmadhuri is a soft, juicy cottage cheese sweet filled with creamy saffron-infused stuffing, soaked in rich flavored milk.", flavor: "Creamy, sweet, saffron-rich" },
+  {id: 11, name: "Cham Cham", price: 180, image: "items/cham_cham.jpg", description: "Bengali sweet stuffed with cream and coated with coconut or dry fruits.", flavor: "Juicy, creamy, coconutty" },
+  { id: 12, name: "Besan Laddu", price: 140, image: "items/besan.jpg", description: "Classic laddus made from roasted gram flour, ghee, and sugar.", flavor: "Nutty, ghee-rich, sweet" }
+];
+
 
     // Header Component
     function Header({ setCurrentPage, cartItems, removeFromCart, updateQuantity, setSearchQuery }) {
@@ -381,9 +385,9 @@
     function Hero({ setCurrentPage }) {
       const [currentSlide, setCurrentSlide] = React.useState(0);
       const slides = [
-        { image: "items/khajur.jpg", caption: "Savor the Crunch of Khajur" },
-        { image: "items/gulgulla.jpg", caption: "Indulge in Soft Gulgulla" },
-        { image: "items/thekua.jpg", caption: "Taste the Tradition of Thekua" },
+        { image:"items/rasmalai.jpg",caption: "Savor the Divine Ras of rasmalai" },
+        { image:"items/jalebi.jpg",caption: "Indulge in crunchy Jalebis" },
+        { image:"items/peda.jpg",caption: "Taste the Tradition of peda" },
       ];
 
       React.useEffect(() => {
@@ -394,8 +398,8 @@
       }, [slides.length]);
 
       const testimonials = [
-        { name: "Ravi K.", quote: "Thekua tastes just like my grandmother’s recipe!" },
-        { name: "Anita S.", quote: "Khajur is my new favorite snack!" },
+        { name: "Ravi K.", quote: "Rasmadhuri is soo authentic!" },
+        { name: "Anita S.", quote: "besan ke laddos is my new favorite snack!" },
         { name: "Priya M.", quote: "Fast delivery and authentic flavors!" },
       ];
 
@@ -421,7 +425,8 @@
                     onError={(e) => { e.target.src = `https://via.placeholder.com/1200x400?text=${slide.caption}`; }}
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-indigo-900 bg-opacity-50 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center">
+
                     <div className="text-center text-peach-100">
                       <h2 className="text-4xl md:text-5xl font-bold font-raleway mb-4 animate-slideIn">{slide.caption}</h2>
                       <a
@@ -625,7 +630,8 @@
                 </a>
               </div>
             ) : (
-              <div className="max-w-4xl mx-auto bg-indigo-100 p-6 rounded-lg shadow-lg madhubani-border animate-slideIn">
+              <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg madhubani-border animate-slideIn">
+
                 <table className="cart-table w-full mb-6">
                   <thead>
                     <tr>
